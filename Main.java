@@ -2,23 +2,17 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
 
+String isim = "John";
+String soyisim = "White";
+String kartNo = "1234234534561478";
+int isimBoyut = isim.length();
+int soyIsimBoyut = soyisim.length();
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Vucut kitle indexini  gir");
-        double bmi = input.nextDouble();
-
-        if (bmi<0){
-            System.out.println("gecersiz bmi degeri girdiniz");
-        } else if (bmi<18.5) {
-            System.out.println("weak");
-        } else if (bmi>18.5&&bmi<24.9) {
-            System.out.println("your weight is ideal");
-        } else if (bmi>25&&bmi<29.9) {
-            System.out.println("fat");
-        } else if (bmi>30) {
-            System.out.println("obese");
-        }
-
+System.out.println(isim.substring(0, 1).toUpperCase() + isim.substring(1, isimBoyut).replaceAll("[A-Za-z]", "*") + " ");
+System.out.println(soyisim.substring(0, 1).toUpperCase() + soyisim.substring(1, soyIsimBoyut).replaceAll("[A-Za-z]", "*") + " ");
+System.out.println(kartNo.substring(0, 4) + " " + kartNo.substring(4, 8) + " " + kartNo.substring(8, 12) + " " + kartNo.substring(12));
+    }
 
   }
+  
 }
